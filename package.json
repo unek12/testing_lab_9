@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --collect-coverage",
     "wdio": "wdio run wdio.conf.js"
   },
   "author": "",
@@ -16,5 +16,8 @@
     "@wdio/spec-reporter": "^7.26.0",
     "chromedriver": "^107.0.3",
     "wdio-chromedriver-service": "^8.0.0"
+  },
+  "dependencies": {
+    "jest": "^29.3.1"
   }
 }
