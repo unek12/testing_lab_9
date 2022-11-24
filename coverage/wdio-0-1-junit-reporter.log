@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="pastebin" timestamp="2022-11-24T15:30:02" time="8.344" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="pastebin"/>
+      <property name="capabilities" value="chrome.107_0_5304_107.windows"/>
+      <property name="file" value=".\specs\iCanWin.spec.js"/>
+    </properties>
+    <testcase classname="chrome.107_0_5304_107.windows.pastebin" name="I Can Win" time="8.343">
+      <system-out><![CDATA[
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/url - {"url":"https://pastebin.com/"}
+RESULT: {"url":"https://pastebin.com/"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/window/rect - {"x":null,"y":null,"width":1280,"height":720}
+RESULT: {"x":null,"y":null,"width":1280,"height":720}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element - {"using":"css selector","value":"#postform-text"}
+RESULT: {"using":"css selector","value":"#postform-text"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/a18cb5d6-1577-4b84-ad79-102105ed17d1/clear - {}
+RESULT: {}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/a18cb5d6-1577-4b84-ad79-102105ed17d1/value - {"text":"git config --global user.name  \"New Sheriff in Town\" \ngit reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\ngit push origin master --force"}
+RESULT: {"text":"git config --global user.name  \"New Sheriff in Town\" \ngit reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\ngit push origin master --force"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/execute/sync - {"script":"return (function (elem) {\n        return (function () {\n        return this.parentElement;\n    }).call(elem);\n    }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"3915917a-6094-4380-bf6f-c93aa1f19377","ELEMENT":"3915917a-6094-4380-bf6f-c93aa1f19377"}]}
+RESULT: {"script":"return (function (elem) {\n        return (function () {\n        return this.parentElement;\n    }).call(elem);\n    }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"3915917a-6094-4380-bf6f-c93aa1f19377","ELEMENT":"3915917a-6094-4380-bf6f-c93aa1f19377"}]}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/5fa43822-629a-4523-a0ff-fe1ca7460559/element - {"using":"css selector","value":".selection"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/elements - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/execute/sync - {"script":"return (function (elem) {\n        return (function () {\n        return this.parentElement;\n    }).call(elem);\n    }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"3915917a-6094-4380-bf6f-c93aa1f19377","ELEMENT":"3915917a-6094-4380-bf6f-c93aa1f19377"}]}
+RESULT: {"script":"return (function (elem) {\n        return (function () {\n        return this.parentElement;\n    }).call(elem);\n    }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"3915917a-6094-4380-bf6f-c93aa1f19377","ELEMENT":"3915917a-6094-4380-bf6f-c93aa1f19377"}]}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/5fa43822-629a-4523-a0ff-fe1ca7460559/element - {"using":"css selector","value":".selection"}
+RESULT: {"using":"css selector","value":".selection"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/39a8645f-6ff4-4627-ab6b-cbf4411089a8/click - {}
+RESULT: {}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element - {"using":"xpath","value":"//li[text()=\"Bash\"]"}
+RESULT: {"using":"xpath","value":"//li[text()=\"Bash\"]"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/4df1fbd5-b428-4a6a-87ed-ba77734b7310/click - {}
+RESULT: {}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element - {"using":"css selector","value":"#postform-name"}
+RESULT: {"using":"css selector","value":"#postform-name"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/4bd9c76e-602f-4ead-aa60-2b7e3c75fe00/clear - {}
+RESULT: {}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/4bd9c76e-602f-4ead-aa60-2b7e3c75fe00/value - {"text":"how to gain dominance among developers"}
+RESULT: {"text":"how to gain dominance among developers"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element - {"using":"css selector","value":".btn.-big"}
+RESULT: {"using":"css selector","value":".btn.-big"}
+COMMAND: POST /session/f49d9d60c9de482d9fe2559bd982a6ec/element/83d6a41b-66f7-40f6-9325-ab4feee82111/click - {}
+RESULT: {}
+COMMAND: DELETE /session/f49d9d60c9de482d9fe2559bd982a6ec - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
