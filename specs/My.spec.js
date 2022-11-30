@@ -1,14 +1,20 @@
-// describe('pullandbeer', () => {
-//     beforeEach(async () => {
-//         await browser.url('https://www.pullandbear.com/')
-//         await browser.setWindowSize(1280, 720)
-//     })
+const LocalizationPage = require("./objects/localization_page");
+const GenderPage = require("./objects/gender_page");
+const ProductPage = require("./objects/product_page");
+const Menu = require("./objects/menu");
 
-//     it('should display product', async () => {
-//         await $('#continueButton').click()
-//         await $('.c-genre-selector-item').click()
-//         await $('//span[@class="c-main-nav-link-name" and contains(text(),"Обувь")]/parent::*/parent::a').click()
 
-//         await expect((await $('//span[contains(text(), "Босоножки с ремешками, на каблуке")][1]'))).toExist()
-//     });
-// });
+describe('pullandbeer', () => {
+    beforeEach(async () => {
+        await browser.url('https://www.pullandbear.com/');
+        await browser.setWindowSize(1280, 720);
+    })
+
+    it('should display product', async () => {
+        await LocalizationPage.selectDefaultLocalization();
+        await GenderPage.selectGender();
+        await Menu.clickNoveltiesMenuButton();
+
+        await expect(ProductPage.selectProduct('//span[contains(text(), "Длинное двубортное пальто")][1]')).toExist()
+    });
+});

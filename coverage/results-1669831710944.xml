@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="pastebin" timestamp="2022-11-30T21:08:31" time="2.403" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="pastebin"/>
+      <property name="capabilities" value="chrome.107_0_5304_122.windows"/>
+      <property name="file" value=".\specs\iCanWin.spec.js"/>
+    </properties>
+    <testcase classname="chrome.107_0_5304_122.windows.pastebin" name="I Can Win" time="2.402">
+      <system-out><![CDATA[
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/url - {"url":"https://pastebin.com/"}
+RESULT: {"url":"https://pastebin.com/"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/window/rect - {"x":null,"y":null,"width":1280,"height":720}
+RESULT: {"x":null,"y":null,"width":1280,"height":720}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element - {"using":"css selector","value":"#postform-text"}
+RESULT: {"using":"css selector","value":"#postform-text"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element/1acc9995-94c5-4e0b-b68b-90714acb8aa3/clear - {}
+RESULT: {}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element/1acc9995-94c5-4e0b-b68b-90714acb8aa3/value - {"text":"git config --global user.name  \"New Sheriff in Town\" \ngit reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\ngit push origin master --force"}
+RESULT: {"text":"git config --global user.name  \"New Sheriff in Town\" \ngit reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\ngit push origin master --force"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element - {"using":"css selector","value":"#postform-format"}
+RESULT: {"using":"css selector","value":"#postform-format"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/execute/sync - {"script":"return (function (elem) {\n        return (function () {\n        return this.parentElement;\n    }).call(elem);\n    }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"5d273b1e-6a19-4875-961a-eeb65a82d21b","ELEMENT":"5d273b1e-6a19-4875-961a-eeb65a82d21b"}]}
+RESULT: {"script":"return (function (elem) {\n        return (function () {\n        return this.parentElement;\n    }).call(elem);\n    }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"5d273b1e-6a19-4875-961a-eeb65a82d21b","ELEMENT":"5d273b1e-6a19-4875-961a-eeb65a82d21b"}]}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element/81d22396-68f6-46cb-b15b-0f68d65ca038/element - {"using":"css selector","value":".selection"}
+RESULT: {"using":"css selector","value":".selection"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element/8226b52e-3465-4d69-aa9d-064adeed84fe/click - {}
+RESULT: {}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element - {"using":"xpath","value":"//li[text()=\"Bash\"]"}
+RESULT: {"using":"xpath","value":"//li[text()=\"Bash\"]"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element/42abf3c0-19e1-4889-bf78-6eb539205895/click - {}
+RESULT: {}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element - {"using":"css selector","value":"#postform-name"}
+RESULT: {"using":"css selector","value":"#postform-name"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element/7de53064-0d67-41f0-8453-5c5598db0fd8/clear - {}
+RESULT: {}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element/7de53064-0d67-41f0-8453-5c5598db0fd8/value - {"text":"how to gain dominance among developers"}
+RESULT: {"text":"how to gain dominance among developers"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element - {"using":"css selector","value":".btn.-big"}
+RESULT: {"using":"css selector","value":".btn.-big"}
+COMMAND: POST /session/c5d2f417aa2bcf24271ef2d04b8f2206/element/5bf91f80-11b1-49fb-827b-3e603331b702/click - {}
+RESULT: {}
+COMMAND: DELETE /session/c5d2f417aa2bcf24271ef2d04b8f2206 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
