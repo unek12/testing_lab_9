@@ -6,7 +6,7 @@ class ProductPage extends Page {
     }
 
     async selectProduct(product) {
-        return await $(product)
+        return $(product)
     }
 
     async openSortMenu(){

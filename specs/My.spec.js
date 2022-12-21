@@ -3,32 +3,53 @@ const GenderPage = require("./objects/gender_page");
 const ProductPage = require("./objects/product_page");
 const Menu = require("./objects/menu");
 
+const existRecord = '"Кожаная куртка с бахромой - Limited Edition"'
+const existRecordWithSort = '"Серьги-кольца “Бабочка”"'
+const existRecordXPath = `//span[contains(text(), ${ existRecord })][1]`
+const existRecordWithSortXPath = `//span[contains(text(), ${ existRecordWithSort })][1]`
+
 
 describe('pullandbeer', () => {
-    beforeEach(async () => {
-        await browser.url('https://www.pullandbear.com/');
-        await browser.setWindowSize(1280, 720);
-    })
+  before(async () => {
+    await browser.url('https://www.pullandbear.com/');
+    await browser.setWindowSize(1280, 720);
+  })
 
-    it('should display product', async () => {
-        await LocalizationPage.selectDefaultLocalization();
-        await GenderPage.selectGender();
-        await browser.pause(5000);
-        await Menu.clickNoveltiesMenuButton();
+  it('наличие товара в магазине', async () => {
+    await LocalizationPage.selectDefaultLocalization();
+    await GenderPage.selectGender();
+    // browser.pause(3000)
+    browser.pause(3000)
+    await Menu.clickNoveltiesMenuButton();
 
-        await expect(ProductPage.selectProduct('//span[contains(text(), "Длинное двубортное пальто")][1]')).toExist();
-     });
+    await expect(ProductPage.selectProduct(existRecordXPath)).toExist();
+  });
 
-    it('should sort display product', async () => {
-        await LocalizationPage.selectDefaultLocalization();
-        await browser.pause(5000);
-        await Menu.clickNoveltiesMenuButton();
+  it('проверка сортироки', async () => {
+    // await LocalizationPage.selectDefaultLocalization();
+    // await GenderPage.selectGender();
+    browser.pause(3000)
+    await Menu.clickNoveltiesMenuButton();
 
-        await expect(ProductPage.selectProduct('//span[contains(text(), "Длинное двубортное пальто")][1]')).toExist()
-        await ProductPage.openSortMenu()
-        await ProductPage.sortAsc()
-        
-        await browser.deleteCookies()
-        await expect(ProductPage.selectProduct('//span[contains(text(), "Серебристые серьги “Крест”")][1]')).toExist()
-    });
+    await expect(ProductPage.selectProduct(existRecordXPath)).toExist();
+    browser.pause(3000)
+    await ProductPage.openSortMenu();
+    await ProductPage.sortAsc();
+
+    await expect(ProductPage.selectProduct(existRecordWithSortXPath)).toExist();
+  });
+
+  // it('наличие размера товара в магазине', async () => {
+  //   // await LocalizationPage.selectDefaultLocalization();
+  //   // await GenderPage.selectGender();
+  //   // browser.pause(3000)
+  //
+  //   await Menu.clickNoveltiesMenuButton();
+  //
+  //   await expect(ProductPage.selectProduct('//span[contains(text(), "Стеганые полусапоги")][1]')).toExist();
+  //
+  //   await $('//*[@id="productWrapper"]/a').click()
+  //
+  //   browser.pause(3000)
+  // });
 });
