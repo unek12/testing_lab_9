@@ -6,6 +6,7 @@ class GenderPage extends Page {
     }
 
     async selectGender() {
+        await $(this.genderButton).waitForExist({ timeout: 10000 })
         await $(this.genderButton).click()
     }
 }

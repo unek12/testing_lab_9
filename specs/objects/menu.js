@@ -8,7 +8,7 @@ class Menu {
     }
 
     get shopsButtonSelector() {
-        return '/html/body/div[4]/div[3]/div/div/ul/li[14]/a/p/span'
+        return '//a[@data-category-id="1030259513"]'
     }
 
     get shopsButton() {
@@ -16,11 +16,14 @@ class Menu {
     }
 
     async clickShopsButton() {
-        await this.shopsButton.click()
+        // await this.shopsButton.waitForExist({ timeout: 10000 })
+        // await this.shopsButton.click()
+        await browser.url('https://www.pullandbear.com/by/store-locator.html')
     }
 
     async clickNoveltiesMenuButton() {
-        await this.noveltiesMenuButton.click()
+    await this.noveltiesMenuButton.waitForExist({ timeout: 10000 })
+    await this.noveltiesMenuButton.click()
     }
 }
 

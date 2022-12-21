@@ -5,51 +5,48 @@ const Menu = require("./objects/menu");
 
 const existRecord = '"Кожаная куртка с бахромой - Limited Edition"'
 const existRecordWithSort = '"Серьги-кольца “Бабочка”"'
-const existRecordXPath = `//span[contains(text(), ${ existRecord })][1]`
-const existRecordWithSortXPath = `//span[contains(text(), ${ existRecordWithSort })][1]`
-
+const existRecordXPath = `//span[contains(text(), ${existRecord})][1]`
+const existRecordWithSortXPath = `//span[contains(text(), ${existRecordWithSort})][1]`
 
 describe('pullandbeer', () => {
-  before(async () => {
-    await browser.url('https://www.pullandbear.com/');
-    await browser.setWindowSize(1280, 720);
-  })
+    before(async () => {
+        await browser.url('https://www.pullandbear.com/');
+        await browser.setWindowSize(1280, 720);
+        await LocalizationPage.selectDefaultLocalization();
+        await GenderPage.selectGender();
+    })
 
-  it('наличие товара в магазине', async () => {
-    await LocalizationPage.selectDefaultLocalization();
-    await GenderPage.selectGender();
-    // browser.pause(3000)
-    browser.pause(3000)
-    await Menu.clickNoveltiesMenuButton();
+    beforeEach(async () => {
+        await browser.url('https://www.pullandbear.com/');
+        await LocalizationPage.selectDefaultLocalization();
+    })
 
-    await expect(ProductPage.selectProduct(existRecordXPath)).toExist();
-  });
+    // it('наличие товара в магазине', async () => {
+    //     // browser.pause(3000)
+    //     await Menu.clickNoveltiesMenuButton();
+    //
+    //     await expect(ProductPage.selectProduct(existRecordXPath)).toExist();
+    // });
+    //
+    // it('проверка сортироки', async () => {
+    //     await Menu.clickNoveltiesMenuButton();
+    //
+    //     await expect(ProductPage.selectProduct(existRecordXPath)).toExist();
+    //     await ProductPage.openSortMenu();
+    //     await ProductPage.sortAsc();
+    //
+    //     await expect(ProductPage.selectProduct(existRecordWithSortXPath)).toExist();
+    // });
 
-  it('проверка сортироки', async () => {
-    // await LocalizationPage.selectDefaultLocalization();
-    // await GenderPage.selectGender();
-    browser.pause(3000)
-    await Menu.clickNoveltiesMenuButton();
+    it('наличие размера товара в магазине', async () => {
+        await Menu.clickNoveltiesMenuButton();
 
-    await expect(ProductPage.selectProduct(existRecordXPath)).toExist();
-    browser.pause(3000)
-    await ProductPage.openSortMenu();
-    await ProductPage.sortAsc();
+        await expect(ProductPage.selectProduct(existRecordXPath)).toExist();
 
-    await expect(ProductPage.selectProduct(existRecordWithSortXPath)).toExist();
-  });
+        await $(existRecordXPath).click({x: -1});
 
-  // it('наличие размера товара в магазине', async () => {
-  //   // await LocalizationPage.selectDefaultLocalization();
-  //   // await GenderPage.selectGender();
-  //   // browser.pause(3000)
-  //
-  //   await Menu.clickNoveltiesMenuButton();
-  //
-  //   await expect(ProductPage.selectProduct('//span[contains(text(), "Стеганые полусапоги")][1]')).toExist();
-  //
-  //   await $('//*[@id="productWrapper"]/a').click()
-  //
-  //   browser.pause(3000)
-  // });
+        await $('.c-product-info--size .product-card-size-selector--label').click()
+
+        await expect($('.c-product-info--size [data-name=M]')).toExist()
+    });
 });

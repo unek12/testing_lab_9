@@ -7,15 +7,13 @@
 //
 // describe('pullandbeer', () => {
 //     before(async () => {
-//         await browser.url('https://www.pullandbear.com/');
+//         await browser.url('https://www.pullandbear.com/ww');
 //         await browser.setWindowSize(1280, 720);
-//         await LocalizationPage.selectDefaultLocalization();
 //         await GenderPage.selectGender();
 //     })
 //
 //     beforeEach(async () => {
-//         await browser.url('https://www.pullandbear.com/');
-//         await LocalizationPage.selectDefaultLocalization();
+//         await browser.url('https://www.pullandbear.com/ww');
 //     })
 //
 //     it('проверка меню для людей с ограниченными возможностями', async () => {

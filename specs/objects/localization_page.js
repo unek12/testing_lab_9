@@ -6,6 +6,7 @@ class LocalizationPage extends Page {
     }
 
     async selectDefaultLocalization() {
+        await $(this.defaultLocalizationButton).waitForExist({ timeout: 10000 })
         await $(this.defaultLocalizationButton).click()
     }
 }
